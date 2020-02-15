@@ -1,0 +1,45 @@
+module.exports={
+  data:{
+    'activeColor':'#ff0000',
+    'inactiveColor':'#ccc',
+    'indexMenuMode':'horizontal',
+    'select':'',
+    'activeName': 'second',
+    'activeIndex': '3',
+    'designMenuData':[
+      {
+        'itemName':'重点推荐',
+      },
+      {
+        'itemName':'设计素材'
+      },
+      {
+        'itemName':'设计工具'
+      },
+      {
+        'itemName':'设计导航'
+      },
+      {
+        'itemName':'其他'
+      }
+    ],
+    'switchData':[
+      {
+        'name':'国内',
+        'value':''
+      },
+      {
+        'name':'国外',
+        'value':''
+      },
+      {
+        'name':'免费',
+        'value':''
+      },
+      {
+        'name':'收费',
+        'value':''
+      }
+    ]
+  }
+};
