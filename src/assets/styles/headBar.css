@@ -38,16 +38,16 @@
 
 .search-box>>> .el-button {
   border-radius: 0 5px 5px 0;
-  background: #ff3737;
+  background: #ff0000;
   height: 52px;
   color: white;
   font-size: 20px;
   position: absolute;
   top: 38%;
   right: 26.5%;
-  border-top: solid 1px #ff3737;
-  border-bottom: solid 1px #ff3737;
-  border-right: solid 1px #ff3737;
+  border-top: solid 1px #ff0000;
+  border-bottom: solid 1px #ff0000;
+  border-right: solid 1px #ff0000;
 }
 
 .search-select>>> .el-input__inner{
@@ -71,7 +71,7 @@
   font-family: PingFangSC-Regular;
 }
 .el-select-dropdown__item.selected {
-  color: #ff3737;
+  color: #ff0000;
 }
 
 .search-camera{

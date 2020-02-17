@@ -8,7 +8,7 @@
 <script>
   import headBar from "../components/HeadBar"
     export default {
-        name: "",
+      name: "",
       components: {headBar}
     }
 </script>

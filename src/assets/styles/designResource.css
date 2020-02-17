@@ -11,7 +11,7 @@
   height: 60%;
 }
 
-.index-menu,.design-menu{
+.index-menu{
   background: rgba(255,255,255,0);
   font-weight: 800;
   text-align: left;
@@ -72,11 +72,6 @@
   color: #ff3737;
 }
 
-.design-menu{
-  position: absolute;
-  top:72%;
-}
-
 .index-switch{
   float: left;
   margin-left: 20px;
@@ -91,3 +86,4 @@
 img{
   z-index: -20;
 }
+

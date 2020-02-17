@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navBar :navBarData="headBarInfo.navBarData"></navBar>
+    <navBar></navBar>
     <div class="search-box">
       <el-input
         :placeholder="headBarInfo.searchPlaceholder"
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-  import headBardata from "../../static/headBarData"
   import navBar from '../components/NavBar'
   export default {
     name: "",
+    props:["headBarData"],
     data(){
       return{
-        headBarInfo:headBardata.data
+        headBarInfo:this.headBarData
       }
     },
     methods:{

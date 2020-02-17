@@ -2,7 +2,7 @@
   <div>
     <div class="index-nav">
       <el-menu
-        :default-active="$route.path"
+        :default-active="$route.matched[0].path"
         router
         class="index-menu"
         :mode="navBarInfo.indexMenuMode"
@@ -28,12 +28,12 @@
 </template>
 
 <script>
+  import navBarData from "../../static/navBarData"
   export default {
     name: "",
-    props:["navBarData"],
     data(){
       return{
-        navBarInfo:this.navBarData
+        navBarInfo:navBarData.data
       }
     },
     methods: {

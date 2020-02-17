@@ -29,6 +29,10 @@
   font-family: Segoe UI, Segoe UI-Bold;
 }
 
+.index-nav>>>.el-menu-item:hover{
+  color: #ff0000;
+}
+
 .el-menu.el-menu--horizontal{
   border: solid 0px;
 }

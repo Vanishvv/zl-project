@@ -1,18 +1,13 @@
 <template>
   <div class="material-list">
     <!--顶部导航&搜索框-->
-    <headBar></headBar>
-    <!--设计标签页-->
-    <el-menu
-      :default-active="indexData.activeIndex"
-      class="design-menu"
-      :mode="indexData.indexMenuMode"
-      @select="handleSelect"
-      :active-text-color="indexData.activeColor">
-      <el-menu-item
-        :index="(index+'')"  v-for="(designMenuItem,index) in indexData.designMenuData" :key="index"
-      >{{designMenuItem.itemName}}</el-menu-item>
-    </el-menu>
+    <headBar
+      :headBarData="indexData.headBarData"
+    ></headBar>
+    <!--资源标签页-->
+    <indexTabs
+      :indexTabsData="indexData.indexTabsData"
+    ></indexTabs>
     <!--筛选开关-->
     <div class="switch-list">
       <el-switch
@@ -30,23 +25,23 @@
 
 <script>
   import headBar from "../components/HeadBar"
+  import indexTabs from "../components/IndexTabs"
   import materialListData from "../../static/designResourceData"
   export default {
     name: '',
     data(){
       return {
-        indexData:materialListData.data
+        indexData:materialListData.data,
+        indexTabsData: '',
+        headBarData: ''
       }
     },
     methods: {
       handleSelect(key, keyPath) {
         this.$log(key, keyPath);
-      },
-      handleClick(tab, event) {
-        this.$log(tab, event);
       }
     },
-    components:{headBar}
+    components:{headBar,indexTabs}
   }
 </script>
 
