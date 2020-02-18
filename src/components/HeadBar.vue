@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="head-bar">
     <navBar></navBar>
     <div class="search-box">
       <el-input
@@ -25,6 +25,7 @@
         <i class="el-icon-camera-solid" @click="uploadImg"></i>
       </div>
     </div>
+    <img :src="headBarInfo.indexBgUrl" class="index-bg" alt=" " >
   </div>
 </template>
 

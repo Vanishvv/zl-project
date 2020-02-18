@@ -4,7 +4,7 @@
     <headBar
       :headBarData="materialsData.headBarData"
     ></headBar>
-    <!--作品标签页-->
+    <!--素材标签页-->
     <indexTabs
       :indexTabsData="materialsData.indexTabsData"
     ></indexTabs>

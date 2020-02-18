@@ -5,6 +5,7 @@ module.exports={
     'indexMenuMode':'horizontal',
     'select':'',
     'headBarData':{
+      'indexBgUrl':'/static/images/index-bg.jpg',
       'searchInput':'',
       'options': [{
         'value': '选项1',

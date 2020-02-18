@@ -1,6 +1,7 @@
 module.exports={
   data:{
     'headBarData':{
+      'indexBgUrl':'/static/images/index-bg.jpg',
       'searchInput':'',
       'options': [{
         'value': '选项1',

@@ -42,7 +42,7 @@ export default new Router({
           meta:{
             title:"设计素材网站"
           },
-          component:()=>import("../components/DeignResourceSet/DesignMaterialSite")
+          component:()=>import("../components/DeignResourceSet/DesignMaterialsSite")
         },
         {
           path:"tool",

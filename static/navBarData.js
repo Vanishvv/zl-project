@@ -6,7 +6,6 @@ module.exports={
     'logoName':'浙江省服装个性化定制2011协同创新中心',
     'radioChoose': '注册',
     'logoUrl':'/static/images/zldz-logo.png',
-    'indexBgUrl':'/static/images/index-bg.jpg',
     'radioData':[
       {
         'labelName':'注册'

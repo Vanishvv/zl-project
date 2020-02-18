@@ -1,0 +1,96 @@
+.website-card {
+  margin-bottom: 16px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: rgba(0,0,0,.65);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+  cursor: pointer;
+  height: 200px;
+  width: 30%;
+  float: left;
+  margin-left: 35px;
+}
+
+.card>>>.el-card__body{
+  padding: 0;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+}
+
+.card-logo {
+  height: 48px;
+  border-radius: 48px;
+  margin-right: 12px;
+  margin-top:25px;
+}
+
+.card-detail {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.card-title {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 9px;
+  color: rgba(0,0,0,.85);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.card-info {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  height: 64px;
+  color: rgba(0,0,0,.45);
+  display: -webkit-box;
+}
+
+.card-menu {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  background: #f7f9fa;
+  line-height: 50px;
+  text-align: left;
+}
+
+.card-author{
+  line-height: 50px;
+  padding-top: 8px;
+  padding-right: 50px;
+  padding-left: 15px;
+}
+
+.card-like{
+  height: 50px;
+  width:50px;
+  padding-left: 150px;
+}
+
+.card-like .like-num,.card-view .view-num{
+  margin-left: 35px;
+  margin-top: -55px;
+}
+
+.card-view{
+
+}
+
+.iconfont{
+  font-size: 30px;
+}

@@ -8,7 +8,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 import './js/log'
+import Avue from '@smallwei/avue';
+import '@smallwei/avue/lib/index.css';
 
+Vue.use(Avue);
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(Viewer);
