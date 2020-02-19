@@ -8,7 +8,7 @@
         :name="tabItem.tabName"
         v-if="tabItem.show"
       >
-        <router-view></router-view>
+        <router-view ref="imgViewerMethods"></router-view>
       </el-tab-pane>
     </el-tabs>
   </div>

@@ -49,6 +49,10 @@
   overflow: hidden;
 }
 
+.card-title:hover{
+  color: #ff0000;
+}
+
 .card-info {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -85,10 +89,6 @@
 .card-like .like-num,.card-view .view-num{
   margin-left: 35px;
   margin-top: -55px;
-}
-
-.card-view{
-
 }
 
 .iconfont{

@@ -1,13 +1,25 @@
 <template>
   <div>
-    重点推荐网站
+    <materialsWebsiteCard
+      v-for="(cardItem,index) in cardData" :key="index" :eachCardData="cardItem"
+    >
+    </materialsWebsiteCard>
   </div>
 </template>
 
 <script>
-    export default {
-        name: ""
-    }
+  import materialsWebsiteCard from '../MaterialsWebsiteCard'
+  import cardData from '../../../static/designNavSiteData'
+  export default {
+    name: "",
+    data(){
+      return{
+        cardData:cardData.data,
+        eachCardData:''
+      }
+    },
+    components:{materialsWebsiteCard}
+  }
 </script>
 
 <style scoped>
