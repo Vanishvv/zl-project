@@ -20,6 +20,9 @@
       >
       </el-switch>
     </div>
+    <div class="similar-search" @click="similarSearch">
+      <i class="iconfont zl-chazhaoxiangsi"></i>
+    </div>
   </div>
 </template>
 
@@ -39,6 +42,10 @@
     methods: {
       handleSelect(key, keyPath) {
         this.$log(key, keyPath);
+      },
+      similarSearch(){
+        this.$store.commit('changeWebsiteSearch', false);
+        this.$store.commit('changeSimilarSearch',true);
       }
     },
     components:{headBar,indexTabs}

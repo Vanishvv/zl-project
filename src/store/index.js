@@ -6,7 +6,9 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     imgViewerShow:true,
-    imgWaterfallShow:false
+    imgWaterfallShow:false,
+    websiteSearchShow:true,
+    similarSearchShow:false
   },
   mutations:{
     changeViewerShow(state, imgViewerShow) {
@@ -14,6 +16,12 @@ const store = new Vuex.Store({
     },
     changeWaterfallShow(state,imgWaterfallShow){
       state.imgWaterfallShow=imgWaterfallShow;
+    },
+    changeWebsiteSearch(state,websiteSearchShow){
+      state.websiteSearchShow=websiteSearchShow
+    },
+    changeSimilarSearch(state,similarSearchShow){
+      state.similarSearchShow=similarSearchShow
     }
   },
   getters:{
@@ -22,6 +30,12 @@ const store = new Vuex.Store({
     },
     getterimgWaterfallData(state){
       return state.imgWaterfallShow
+    },
+    getterWebsiteSearch(state){
+      return state.websiteSearchShow
+    },
+    getterSimilarSearch(state){
+      return state.similarSearchShow
     }
   }
 });

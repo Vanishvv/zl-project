@@ -21,7 +21,7 @@ module.exports={
       'searchPlaceholder':'请输入关键字查询'
     },
     'indexTabsData':{
-      'activeName': 'materials',
+      'activeName': 'nav',
       'fatherPath':'/resource/',
       'tabsData':[
         {

@@ -20,10 +20,7 @@
           :value="item.value">
         </el-option>
       </el-select>
-      <el-button icon="el-icon-search" class="search-icon"></el-button>
-      <div class="search-camera">
-        <i class="el-icon-camera-solid" @click="uploadImg"></i>
-      </div>
+      <el-button icon="el-icon-search" class="search-icon" @click="search"></el-button>
     </div>
     <img :src="headBarInfo.indexBgUrl" class="index-bg" alt=" " >
   </div>
@@ -40,8 +37,9 @@
       }
     },
     methods:{
-      uploadImg(){
-        this.$log("相机被点击了");
+      search(){
+        this.$store.commit('changeWebsiteSearch', true);
+        this.$store.commit('changeSimilarSearch',false);
       }
     },
     components: {navBar}

@@ -9,7 +9,7 @@
 
 <script>
   import materialsWebsiteCard from '../MaterialsWebsiteCard'
-  import cardData from '../../../static/designNavSiteData'
+  import cardData from '../../../static/designMaterialSiteData'
   export default {
     name: "",
     data(){

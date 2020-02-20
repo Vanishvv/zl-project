@@ -1,0 +1,57 @@
+.card{
+  width: 48%;
+  float: left;
+  height: 200px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.card>>>.el-card{
+  width: 100%;
+  float: left;
+  height: 200px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.card-body{
+  -webkit-box-orient: vertical;
+  text-align: left;
+  margin-left: 230px;
+}
+
+.card-type{
+  margin-top: 50px;
+}
+
+.card-percent{
+  margin-top: 15px;
+}
+
+.card-url{
+  color:#2c3e50;
+  margin-top: -5px;
+}
+
+.card-type,.card-percent{
+  color: rgba(0,0,0,.45);
+}
+
+.card-logo{
+  height: 160px;
+  float: left;
+}
+
+img{
+  height: 160px;
+}
+
+.iconfont{
+  font-size: 35px;
+  color: rgba(0,0,0,.45);
+}
+
+.card-like{
+  margin-top: -140px;
+  margin-right: -65%;
+}

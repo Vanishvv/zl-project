@@ -79,11 +79,30 @@
 
 .switch-list{
   position: absolute;
-  top: 75%;
+  top: 74%;
   right: 2%;
 }
 
 img{
   z-index: -20;
+}
+
+.iconfont{
+  font-size: 20px;
+}
+
+.similar-search{
+  position: absolute;
+  padding-right: 15px;
+  top:40%;
+  right: 38%;
+  font-size: 25px;
+  color: #99a9bf;
+  z-index:100;
+  border-right: 1px solid #99a9bf;
+}
+
+.similar-search:hover .iconfont{
+  color: #ff0000;
 }
 

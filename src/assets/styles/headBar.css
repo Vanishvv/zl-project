@@ -49,6 +49,10 @@ img{
   border-radius: 5px 0px 0px 5px;
 }
 
+.search-box>>>.el-input__inner:visited{
+  border:none ;
+}
+
 .search-box>>> .el-button {
   border-radius: 0 5px 5px 0;
   background: #ff0000;
@@ -87,11 +91,4 @@ img{
   color: #ff0000;
 }
 
-.search-camera{
-  position: absolute;
-  top:40%;
-  right: 39%;
-  font-size: 25px;
-  color: #99a9bf;
-}
 

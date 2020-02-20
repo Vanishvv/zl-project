@@ -25,7 +25,7 @@ export default new Router({
       meta:{
         title: "设计资源"
       },
-      redirect:'/resource/materials',
+      redirect:'/resource/nav',
       component: DesignResources,
       children:[
         {
