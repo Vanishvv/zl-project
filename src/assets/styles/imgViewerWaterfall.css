@@ -1,0 +1,76 @@
+.cell-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cell-item:hover{
+  -webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  -moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  -o-box-shadow:1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+}
+
+.image{
+  display: none;
+}
+
+.img-author,.img-like,.img-view,.img-download{
+  height: 40px;
+  width: 40px;
+  float: left;
+  padding-top: 3px;
+  margin-left: 20px;
+}
+
+.img-like,.img-view,.img-download{
+  padding-top: 15px;
+}
+
+.iconfont{
+  font-size: 25px;
+  color: white;
+}
+
+.img-tool-bg{
+  margin-top: -50px;
+  height: 50px;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));;
+}
+
+.img-author{
+  padding-top: 15px;
+  margin-right:28px ;
+  margin-left: 10px;
+}
+
+.like-num,.view-num{
+  margin-top: -20px;
+  margin-left: 35px;
+}
+
+.cell-item:hover .img-tool{
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 1;
+}
+
+.img-tool{
+  margin-top: -50px;
+  height: 50px;
+  width: 100%;
+  opacity:0;
+  color: white;
+  position: relative;
+  font-size: 14px;
+  z-index: 999;
+}
+

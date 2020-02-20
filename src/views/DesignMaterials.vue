@@ -31,11 +31,13 @@
     methods:{
     imgViewerSelected(){
       this.$log('选择图片排列方式为等高等宽');
-      this.$store.commit('changeMethods', true,false);
+      this.$store.commit('changeViewerShow', true);
+      this.$store.commit('changeWaterfallShow',false);
     },
     imgWaterfallSelected(){
       this.$log('选择图片排列方式为瀑布流');
-      this.$store.commit('changeMethods', false,true);
+      this.$store.commit('changeViewerShow', false);
+      this.$store.commit('changeWaterfallShow',true);
     }
     },
     components: {headBar,indexTabs}

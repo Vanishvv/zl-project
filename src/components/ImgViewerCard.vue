@@ -4,16 +4,16 @@
       <a>
         <el-image
           :src="eachCardInfo.url"
-          :fit="eachCardInfo.fit"
+          :fit="commonInfo.fit"
           class="el-image"
         >
         </el-image>
-        <viewer :images="eachCardInfo.srcList"
+        <viewer :images="commonData.srcList"
                 class="viewer"
                 ref="viewer"
                 @inited="inited"
         >
-          <img v-for="src in eachCardInfo.srcList" :src="src" :key="src" class="image">
+          <img v-for="(src,index) in commonData.srcList" :src="src" :key="index" class="image">
         </viewer>
       </a>
     </div>
@@ -40,10 +40,11 @@
 <script>
   export default {
     name: 'imgViewer',
-    props:["eachCardData"],
+    props:["eachCardData","commonData","imgIndex"],
     data(){
       return{
-        eachCardInfo: this.eachCardData
+        eachCardInfo: this.eachCardData,
+        commonInfo:this.commonData
       }
     },
     methods:{
@@ -51,7 +52,7 @@
         this.$viewer = viewer
       },
       show() {
-        this.$viewer.view(this.eachCardInfo.imgIndex)
+        this.$viewer.view(this.imgIndex)
       }
     }
   }

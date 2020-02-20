@@ -2,11 +2,16 @@
 <div>
   <imgViewer
     :eachCardData="cardItem"
+    :commonData="eachCardData"
     v-for="(cardItem,index) in eachCardData.imgViewerData"
+    :imgIndex="index"
     :key="index"
     v-if="viewerShow"
   ></imgViewer>
-  <imgWaterfall></imgWaterfall>
+  <imgWaterfall
+    v-if="waterfallShow"
+    :waterfallData="eachCardData"
+  ></imgWaterfall>
 </div>
 </template>
 
@@ -19,7 +24,10 @@
     name: "",
     data(){
       return{
-        eachCardData:flowerData.data
+        eachCardData:flowerData.data,
+        waterfallData:'',
+        commonData:'',
+        imgIndex:''
       }
     },
     components: {imgViewer,imgWaterfall},
@@ -36,11 +44,11 @@
       ])
     },
     watch:{
-      getterViewerData(message){
-        this.$log(message)
+      getterimgViewerData(message){
+        this.$log('imgViewerShow:'+message)
       },
       getterimgWaterfallData(message){
-        this.$log(message)
+        this.$log("imgWaterfallShow:"+message)
       }
     }
   }

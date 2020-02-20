@@ -5,12 +5,14 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    imgViewerShow:false,
-    imgWaterfallShow:true
+    imgViewerShow:true,
+    imgWaterfallShow:false
   },
   mutations:{
-    changeMethods(state, imgViewerShow,imgWaterfallShow) {
+    changeViewerShow(state, imgViewerShow) {
       state.imgViewerShow=imgViewerShow;
+    },
+    changeWaterfallShow(state,imgWaterfallShow){
       state.imgWaterfallShow=imgWaterfallShow;
     }
   },

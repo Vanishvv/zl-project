@@ -6,14 +6,31 @@
              :data="data"
              @loadmore="loadmore">
     <template >
-      <div class="cell-item" v-for="(item,index) in data" :key="index" @click="show">
-        <img v-if="item.img" :lazy-src="item.img" alt="load error"/>
-        <viewer :images="srcList"
+      <div class="cell-item" v-for="(imgItem,index) in waterfallInfo.imgViewerData" :key="index + '-only'" @click="show(index)">
+        <img v-if="imgItem.url" :lazy-src="imgItem.url" alt="load error" class="waterfall-img"/>
+        <div class="img-tool">
+          <div class="img-author">
+            <el-avatar :size="25" :src="imgItem.authorUrl"></el-avatar>
+          </div>
+          <div class="img-like">
+            <i class="iconfont zl-shoucang"></i>
+            <p class="like-num">{{imgItem.likeNum}}</p>
+          </div>
+          <div class="img-view">
+            <i class="iconfont zl-liulan"></i>
+            <p class="view-num">{{imgItem.viewNum}}</p>
+          </div>
+          <div class="img-download">
+            <i class="iconfont zl-icon--"></i>
+          </div>
+          <div class="img-tool-bg"></div>
+        </div>
+        <viewer :images="waterfallInfo.srcList"
                 class="viewer"
                 ref="viewer"
                 @inited="inited"
         >
-          <img v-for="src in srcList" :src="src" :key="src" class="image">
+          <img v-for="(src,index) in waterfallInfo.srcList" :src="src" :key="index" class="image">
         </viewer>
       </div>
     </template>
@@ -24,57 +41,11 @@
 <script>
   export default {
     name: "",
+    props:["waterfallData"],
     data(){
       return{
-        col:5,
-        srcList:[
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/a66332c19cd431172f96268901162d7bf9573e9513edb5-2YHESR_fw658",
-          "https://hbimg.huabanimg.com/4ef0bca36e03351c82a20535883da54ebb99f3d4183749-chZe7d_fw658",
-          "https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658",
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658",
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658",
-          "https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658"
-        ],
-        data:[
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/a66332c19cd431172f96268901162d7bf9573e9513edb5-2YHESR_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/4ef0bca36e03351c82a20535883da54ebb99f3d4183749-chZe7d_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/bbd93e716bb13a9f2e7c4e918201c6fcbddf4936185145-admi0p_fw658"
-          },
-          {
-            img:"https://hbimg.huabanimg.com/fe0743a01da04c0996511663b870d5320bc2b08635603-zg0pyQ_fw658"
-          }
-        ],
+        waterfallInfo:this.waterfallData,
+        col:5
       }
     },
     computed:{
@@ -96,34 +67,13 @@
       inited (viewer) {
         this.$viewer = viewer
       },
-      show() {
-        this.$viewer.view(this.index)
+      show(index) {
+        this.$viewer.view(index);
       }
     }
   }
 </script>
 
 <style>
-  .cell-item {
-    width: 100%;
-    background: #ffffff;
-    margin-bottom: 20px;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .cell-item:hover{
-    -webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-    -moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-    box-shadow: 1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-    -o-box-shadow:1px 1px 8px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-  }
-
-  .image{
-    display: none;
-  }
-
+@import "../assets/styles/imgViewerWaterfall.css";
 </style>

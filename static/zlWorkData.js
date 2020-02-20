@@ -1,6 +1,7 @@
 module.exports={
   data:{
     'headBarData':{
+      'indexBgUrl':'/static/images/index-bg.jpg',
       'searchInput':'',
       'options': [{
         'value': '选项1',
@@ -41,20 +42,20 @@ module.exports={
         {
           'labelName':'服装艺术设计',
           'tabName':'costume',
-          'show':true
+          'show':false
         },
         {
           'labelName':'纺织品艺术设计',
           'tabName':'textile',
-          'show':true
+          'show':false
         },
         {
           'labelName':'人物形象设计',
           'tabName':'characters',
-          'show':true
+          'show':false
         },
         {
-          'labelName':'课外作品设计',
+          'labelName':'课外作品',
           'tabName':'extracurricular',
           'show':true
         }
