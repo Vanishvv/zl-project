@@ -4,6 +4,9 @@
     <headBar
       :headBarData="indexData.headBarData"
     ></headBar>
+    <!--侧边栏-->
+    <sideBar>
+    </sideBar>
     <!--资源标签页-->
     <indexTabs
       :indexTabsData="indexData.indexTabsData"
@@ -30,6 +33,7 @@
   import headBar from "../components/HeadBar"
   import indexTabs from "../components/IndexTabs"
   import materialListData from "../../static/designResourceData"
+  import sideBar from "../components/SideBar"
   export default {
     name: '',
     data(){
@@ -48,7 +52,7 @@
         this.$store.commit('changeSimilarSearch',true);
       }
     },
-    components:{headBar,indexTabs}
+    components:{headBar,indexTabs,sideBar}
   }
 </script>
 

@@ -4,6 +4,9 @@
     <headBar
       :headBarData="materialsData.headBarData"
     ></headBar>
+    <!--侧边栏-->
+    <sideBar>
+    </sideBar>
     <!--素材标签页-->
     <indexTabs
       :indexTabsData="materialsData.indexTabsData"
@@ -20,6 +23,7 @@
   import headBar from "../components/HeadBar"
   import indexTabs from "../components/IndexTabs"
   import designMaterialsData from "../../static/designMaterialsData"
+  import sideBar from "../components/SideBar"
   export default {
     name: "",
     data(){
@@ -40,7 +44,7 @@
       this.$store.commit('changeWaterfallShow',true);
     }
     },
-    components: {headBar,indexTabs}
+    components: {headBar,indexTabs,sideBar}
   }
 </script>
 

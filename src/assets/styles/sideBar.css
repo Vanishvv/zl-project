@@ -1,0 +1,110 @@
+.side-bar-bg{
+  position: fixed;
+  width: 0.5%;
+  height: 100%;
+  right: 0;
+  background-color: #666666;
+}
+
+.side-bar{
+  position: fixed;
+  height: 100%;
+  right: 0;
+  z-index: 999;
+}
+
+.side-bar-add,.side-bar-edit,.side-bar-delete{
+  position: fixed;
+  right: 0;
+}
+
+.side-bar-add{
+  top:45%;
+}
+
+.side-bar-edit{
+  top:50%;
+}
+
+.side-bar-delete{
+  top:55%;
+}
+
+.side-bar-add>>>.el-button--primary,.side-bar-edit>>>.el-button--primary,.side-bar-delete>>>.el-button--primary{
+  background-color: #666666;
+  border-color: #666666;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-drawer>>>.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.add-drawer>>>.avatar-uploader{
+  width: 250px;
+  height: 178px;
+  padding-top: 15px;
+}
+
+.add-drawer>>>.avatar-uploader-icon {
+  font-size: 18px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.add-drawer>>>.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+
+.add-drawer>>>.el-form-item__label{
+  font-size: 14px;
+}
+
+.add-drawer>>>.el-form{
+  padding-left: 20px;
+}
+
+.add-drawer>>>.el-icon-warning-outline{
+  color: #8c939d;
+  font-size: 10px;
+  margin-left: -110px;
+}
+
+.add-drawer>>>.el-input__inner{
+  width: 80%;
+}
+
+.add-drawer>>>.el-textarea__inner{
+  width: 80%;
+ }
+
+.add-drawer>>>.el-input{
+  text-align: left;
+}
+
+.add-drawer>>>.el-textarea{
+  text-align: left;
+}
+
+.add-drawer>>>.el-radio-group{
+  margin-left: -200px;
+}
+
+.add-price>>>.el-radio-group{
+  margin-left: -180px;
+}
+
+.add-drawer>>>.el-button--primary{
+  margin-top: 50px;
+  margin-left: -100px;
+}
