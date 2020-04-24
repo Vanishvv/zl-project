@@ -1,6 +1,7 @@
 # zl-project
 
 > A Vue.js project
+ 实验室项目，自己的初步实现，后面关于组件的完善和更改以及屏幕自适应等的实现都转移到了实验室的组件库里
 
 ## Build Setup
 
